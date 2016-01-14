@@ -5,16 +5,35 @@ package org.insurance.model;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="STUDENT")
 public class Student {
 
+	@Id
+	@GeneratedValue(strategy= GenerationType.AUTO )
+	@Column(name="NAME")
 	private String studentName;
+	
+	@Column(name="HOBBY")
 	private String studentHobby;
 	
+	@Column(name="MOBILE")
 	private Long studentMobile;
+	
+	@Column(name="DATE_OF_BIRTH")
 	private Date studentDOB;
+	
+	@Column(name="SKILLS")
 	private ArrayList<String> studentSkills;
 
+	@Column(name="ADDRESS")
 	private Address studentAddress;
 
 	public Address getStudentAddress() {

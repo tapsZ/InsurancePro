@@ -6,7 +6,7 @@
 
 	<form:errors path="student1.*"/>
 	
-	<form action="/InsuranceSystem/submitAdmissionForm.html" method="post">
+	<form action="/insurancepro/submitAdmissionForm.html" method="post">
 		<table>
 		<tr><td>Student's Name :   		</td>  <td>       <input type="text" name="studentName" />   </td> </tr>
 		<tr><td>Student's Hobby :  		</td>  <td>       <input type="text" name="studentHobby" />  </td> </tr>
@@ -22,10 +22,10 @@
 	<table>
 			<tr><td>Student's Address : </td></tr> 
 		<tr>
-			<td>country: <input type="text" name="studentAddress.country"/></td>
-			<td>city: <input type="text" name="studentAddress.city" /></td>
-			<td>street: <input type="text" name="studentAddress.street" /></td> 
-			<td>pincode:<input type="text" name="studentAddress.pincode" /></td>
+			<td>country: <input type="text" name="studentAddress.houseNo"/></td>
+			<td>city: <input type="text" name="studentAddress.street" /></td>
+			<td>street: <input type="text" name="studentAddress.city" /></td> 
+			<td>zip:<input type="text" name="studentAddress.zip" /></td>
 		</tr>
 		
 		<tr><td><input type="submit" value="Submit this form by clicking here" /></td></tr>

@@ -44,6 +44,7 @@
 		<mapping class="org.insurance.model.Account" />
 		<mapping class="org.insurance.model.Underwritter" />
 		<mapping class="org.insurance.model.UserDetails" />
+		<mapping class="org.insurance.model.Student" />
 
 	</session-factory>
 </hibernate-configuration>

@@ -30,10 +30,10 @@
 		</tr>
 		<tr>
 			<td>Student Address :</td>
-			<td>country: ${student1.studentAddress.country}
-			       city: ${student1.studentAddress.city}
-			     street: ${student1.studentAddress.street}
-			    pincode: ${student1.studentAddress.pincode}</td>
+			<td>country: ${student1.studentAddress.houseNo}
+			       city: ${student1.studentAddress.street}
+			     street: ${student1.studentAddress.city}
+			    zip: ${student1.studentAddress.zip}</td>
 		</tr>
 
 	</table>
