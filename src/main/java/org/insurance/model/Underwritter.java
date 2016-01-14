@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.insurance.app.insurancepro.model;
+package org.insurance.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,26 +20,24 @@ import javax.persistence.Table;
  *
  * @author user1
  */
-@Entity 
+@Entity
 @Inheritance(strategy=InheritanceType.JOINED)
-@Table(name = "CUSTOMERREP")
-public class CustomerRep extends Member{
-	public CustomerRep(){}
+@Table(name="UNDERWRITTER")
+public class Underwritter extends Member{
+	
+	public Underwritter(){}
 	
 	@OneToMany
-	@JoinTable(name="CUSTOMERREP", joinColumns=@JoinColumn(name="CUSTOMERREP_ID"),
-	inverseJoinColumns=@JoinColumn(name="ACCOUNT_NUMBER"))
-	
-	private Collection<Account> accountList= new ArrayList<Account>();
-	
+	@JoinTable(name="UNDERWRITTER_REQUEST", joinColumns=@JoinColumn(name="UNDERWRITTER_ID"),
+	inverseJoinColumns=@JoinColumn(name="REQUEST_NUMBER"))
+	private Collection<Request> requestList= new ArrayList<Request>();
 
-		public Collection<Account> getAccountList() {
-		return accountList;
+	public Collection<Request> getRequestList() {
+		return requestList;
 	}
 
-	public void setAccountList(Collection<Account> accountList) {
-		this.accountList = accountList;
+	public void setRequestList(Collection<Request> requestList) {
+		this.requestList = requestList;
 	}
-
 	
 }

@@ -1,4 +1,4 @@
-package org.insurance.app.insurancepro.dto;
+package org.insurance.dto;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
  

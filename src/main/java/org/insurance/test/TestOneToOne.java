@@ -1,16 +1,15 @@
-package org.insurance.app.insurancepro.test;
+package org.insurance.test;
 
 import java.text.ParseException;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.insurance.app.insurancepro.dto.Hibernate;
-import org.insurance.app.insurancepro.model.Account;
-import org.insurance.app.insurancepro.model.Address;
-import org.insurance.app.insurancepro.model.Claim;
-import org.insurance.app.insurancepro.model.PolicyHolder;
-
-import org.insurance.app.insurancepro.model.Request;
+import org.insurance.dto.Hibernate;
+import org.insurance.model.Account;
+import org.insurance.model.Address;
+import org.insurance.model.Claim;
+import org.insurance.model.PolicyHolder;
+import org.insurance.model.Request;
 
 public class TestOneToOne {
 

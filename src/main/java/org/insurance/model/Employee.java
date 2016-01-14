@@ -1,4 +1,4 @@
-package org.insurance.app.insurancepro.model;
+package org.insurance.model;
 import java.util.Date;
 
 import javax.persistence.Column;

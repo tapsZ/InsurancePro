@@ -1,4 +1,4 @@
-package org.insurance.app.insurancepro.test;
+package org.insurance.test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -6,8 +6,8 @@ import java.util.Date;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.insurance.app.insurancepro.dto.Hibernate;
-import org.insurance.app.insurancepro.model.Employee;
+import org.insurance.dto.Hibernate;
+import org.insurance.model.Employee;
 
 public class TestEmployeeDetail {
 

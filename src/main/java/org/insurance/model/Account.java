@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.insurance.app.insurancepro.model;
+package org.insurance.model;
 
 import java.util.Date;
 
@@ -22,28 +22,49 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author user1
  */
+
 @Entity
-//@NamedNativeQuery(name = "Claim.all", query = "select * from CLAIM", resultClass = Claim.class)
-//@NamedQuery(name = "Claim.byClaimNo", query = "from Claim where claimNo=?")
-@Table(name = "CLAIM")
-@XmlRootElement(name = "claim")
-public class Claim {
+@Table(name = "ACCOUNT")
+@NamedNativeQuery(name = "Account.all", query = "select * from ACCOUNT", resultClass = Account.class)
+//@NamedQuery(name = "Account.byAccountNo", query = "from Account where accountNo=?")
+
+@XmlRootElement(name = "account")
+public class Account {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int claimNo;
-	private String evidence;
+	private int Account_No;
 	private Date date;
+	private int debit;
+	private int credit;
+	private int balance;
 	private String description;
 
-	private String status;
-
 	@XmlElement
-	public String getEvidence() {
-		return evidence;
+	public int getDebit() {
+		return debit;
 	}
 
-	public void setEvidence(String evidence) {
-		this.evidence = evidence;
+	public void setDebit(int debit) {
+		this.debit = debit;
+	}
+
+	@XmlElement
+	public int getCredit() {
+		return credit;
+	}
+
+	public void setCredit(int credit) {
+		this.credit = credit;
+	}
+
+	@XmlElement
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
 	}
 
 	@XmlElement
@@ -63,28 +84,29 @@ public class Claim {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
-	public void setStatus(String status) {
-		this.status = status;
+
+	@ManyToOne
+	@XmlElement
+	private CustomerRep customerrep;
+
+	public CustomerRep getCustomerrep() {
+		return customerrep;
 	}
-	
-@XmlElement
-	public String getStatus() {
-		return status;
+
+	public void setCustomerrep(CustomerRep customerrep) {
+		this.customerrep = customerrep;
+	}
+
+	public int getAccount_No() {
+		return Account_No;
+	}
+
+	public void setAccount_No(int account_No) {
+		Account_No = account_No;
 	}
 
 	@ManyToOne
-	private ClaimProcessor claimprocessor;
-
-	public ClaimProcessor getClaimprocessor() {
-		return claimprocessor;
-	}
-
-	public void setClaimprocessor(ClaimProcessor claimprocessor) {
-		this.claimprocessor = claimprocessor;
-	}
-
-	@ManyToOne
+	@XmlElement
 	private PolicyHolder policyholder;
 
 	public PolicyHolder getPolicyholder() {

@@ -29,21 +29,21 @@
 		<property name="current_session_context_class">thread</property>
 
 		<!-- Names the annotated entity class -->
-		<mapping class="org.insurance.app.insurancepro.model.Employee" />
+		<mapping class="org.insurance.model.Employee" />
 
-		<mapping class="org.insurance.app.insurancepro.model.Address" />
-		<mapping class="org.insurance.app.insurancepro.model.Claim" />
-		<mapping class="org.insurance.app.insurancepro.model.ClaimProcessor" />
-		<mapping class="org.insurance.app.insurancepro.model.Customer" />
-		<mapping class="org.insurance.app.insurancepro.model.CustomerRep" />
-		<mapping class="org.insurance.app.insurancepro.model.Member" />
-		<mapping class="org.insurance.app.insurancepro.model.Policy" />
-		<mapping class="org.insurance.app.insurancepro.model.PolicyHolder" />
-		<mapping class="org.insurance.app.insurancepro.model.Request" />
-		<mapping class="org.insurance.app.insurancepro.model.Administrator" />
-		<mapping class="org.insurance.app.insurancepro.model.Account" />
-		<mapping class="org.insurance.app.insurancepro.model.Underwritter" />
-		<mapping class="org.insurance.app.insurancepro.model.UserDetails" />
+		<mapping class="org.insurance.model.Address" />
+		<mapping class="org.insurance.model.Claim" />
+		<mapping class="org.insurance.model.ClaimProcessor" />
+		<mapping class="org.insurance.model.Customer" />
+		<mapping class="org.insurance.model.CustomerRep" />
+		<mapping class="org.insurance.model.Member" />
+		<mapping class="org.insurance.model.Policy" />
+		<mapping class="org.insurance.model.PolicyHolder" />
+		<mapping class="org.insurance.model.Request" />
+		<mapping class="org.insurance.model.Administrator" />
+		<mapping class="org.insurance.model.Account" />
+		<mapping class="org.insurance.model.Underwritter" />
+		<mapping class="org.insurance.model.UserDetails" />
 
 	</session-factory>
 </hibernate-configuration>

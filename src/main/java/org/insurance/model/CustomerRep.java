@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.insurance.app.insurancepro.model;
+package org.insurance.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,8 +11,8 @@ import java.util.Collection;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.JoinTable;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -20,26 +20,26 @@ import javax.persistence.Table;
  *
  * @author user1
  */
-@Entity
+@Entity 
 @Inheritance(strategy=InheritanceType.JOINED)
-@Table(name = "CLAIMPROCESSOR")
-public class ClaimProcessor extends Member{
-	public ClaimProcessor() {
-	}
-
+@Table(name = "CUSTOMERREP")
+public class CustomerRep extends Member{
+	public CustomerRep(){}
+	
 	@OneToMany
-	@JoinTable(name="CLAIMPROCESSOR_REQUEST", joinColumns=@JoinColumn(name="CLAIMPROCESSOR_ID"),
-	inverseJoinColumns=@JoinColumn(name="CLAIM_NUMBER"))
+	@JoinTable(name="CUSTOMERREP", joinColumns=@JoinColumn(name="CUSTOMERREP_ID"),
+	inverseJoinColumns=@JoinColumn(name="ACCOUNT_NUMBER"))
 	
-private Collection<Claim> claimList= new ArrayList<Claim>();
+	private Collection<Account> accountList= new ArrayList<Account>();
+	
 
-public Collection<Claim> getClaimList() {
-		return claimList;
+		public Collection<Account> getAccountList() {
+		return accountList;
 	}
 
-	public void setClaimList(Collection<Claim> claimList) {
-		this.claimList = claimList;
+	public void setAccountList(Collection<Account> accountList) {
+		this.accountList = accountList;
 	}
-	
+
 	
 }
