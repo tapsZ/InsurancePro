@@ -57,13 +57,13 @@
      <!--
     Core utilities used by other modules.
     Define this if you use Spring Utility APIs (org.springframework.core.*/org.springframework.util.*)
--->
+
 <dependency>
   <groupId>org.springframework</groupId>
   <artifactId>spring-core</artifactId>
   <version>${org.springframework.version}</version>
 </dependency>
-
+-->
 <!--
     Expression Language (depends on spring-core)
     Define this if you use Spring Expression APIs (org.springframework.expression.*)
